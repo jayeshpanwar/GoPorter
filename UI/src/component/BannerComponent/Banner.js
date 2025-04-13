@@ -49,33 +49,35 @@ function Banner() {
       } else if (path === '/delivery') {
         setBannerContent(
           <>
-           
+
           </>
         );
       }
       else if (path === '/services') {
         setBannerContent(
           <>
-           
+
           </>
         );
       }
       else if (path === '/login') {
         setBannerContent(
           <>
-           
+
           </>
         );
       }
       else if (path === '/register') {
         setBannerContent(
           <>
-           
+
           </>
         );
-        
+
       }
-      
+
+     
+
       else {
         // Default home banner
         setBannerContent(
@@ -83,6 +85,8 @@ function Banner() {
             <div id="Main">
               <div className="carousel-inner">
                 <div className="carousel-item active">
+
+
                   <img
                     src="/assets/img/poster.webp"
                     width="100%"
@@ -135,8 +139,85 @@ function Banner() {
                     </div>
                   </div>
                 </div>
+                
               </div>
             </div>
+            <section className="services-section">
+  <h5 className="section-title">~ OUR SERVICES ~</h5>
+  <div className="services-container">
+    {/* Porter Enterprise Card */}
+    <div className="service-box gradient-purple">
+      <span className="service-tag">Porter Enterprise</span>
+      <h3>Streamlining operations to drive business growth</h3>
+      <button className="service-btn">→</button>
+    </div>
+
+    {/* API Integration Card */}
+    <div className="service-box gradient-green">
+      <span className="service-tag">API Integration</span>
+      <h3>Automate the transportation of your goods by integrating our APIs</h3>
+      <button className="service-btn">→</button>
+    </div>
+
+    {/* Two-Wheelers Card */}
+    <div className="service-box gradient-red">
+      <span className="service-tag">Two-Wheelers</span>
+      <h3>Reliable goods transportation services for up to 20 kg</h3>
+      <button className="service-btn">→</button>
+    </div>
+
+    {/* Trucks Card */}
+    <div className="service-box gradient-blue">
+      <span className="service-tag">Trucks</span>
+      <h3>Hassle-free goods transportation up to 2500 kg</h3>
+      <button className="service-btn">→</button>
+    </div>
+
+{/* packers & Movers*/}
+<div className="service-box gradient-blue">
+      <span className="service-tag">Packers & Movers</span>
+      <h3>Hassle-free goods transportation up to 2500 kg</h3>
+      <button className="service-btn">→</button>
+    </div>
+
+    {/*Intercity Courier Service */}
+    <div className="service-box gradient-blue">
+      <span className="service-tag">Intercity Courier Service
+      </span>
+      <h3>Reliable Intercity Courier Service via Surface & Air</h3>
+      <button className="service-btn">→</button>
+    </div>
+    
+  </div>
+
+  
+</section>
+
+<section class="growth-section">
+  <h2 class="growth-title">And thanks to you, we are growing each & every day!</h2>
+
+  <div class="growth-banner">
+    🎉 <strong>Marhaba Dubai!</strong> We're <span>now live</span> & ready to take care of all your logistical needs.
+  </div>
+
+  <div class="growth-stats">
+    <div class="stat-box">
+      <div class="stat-number">21+</div>
+      <div class="stat-label">Indian Cities</div>
+    </div>
+    <div class="divider"></div>
+    <div class="stat-box">
+      <div class="stat-number">7.5 Lakh+</div>
+      <div class="stat-label">Driver Partners</div>
+    </div>
+    <div class="divider"></div>
+    <div class="stat-box">
+      <div class="stat-number">1.5+ Crore</div>
+      <div class="stat-label">Customers</div>
+    </div>
+  </div>
+</section>
+
 
           </>
         );
