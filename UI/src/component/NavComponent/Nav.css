@@ -1,0 +1,45 @@
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 30px;
+  background-color: white;
+  border-bottom: 1px solid #e2e2e2;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.navbar-logo {
+  font-size: 24px;
+  font-weight: 700;
+  color: #0052cc;
+}
+
+.degree {
+  color: #0052cc;
+}
+
+.navbar-links a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+}
+
+.navbar-auth {
+  display: flex;
+  gap: 15px;
+}
+
+.auth-link {
+  text-decoration: none;
+  font-weight: 500;
+  color: #0052cc;
+}
+
+.auth-link.signup {
+  border: 1px solid #0052cc;
+  border-radius: 4px;
+  padding: 4px 10px;
+}
+
+

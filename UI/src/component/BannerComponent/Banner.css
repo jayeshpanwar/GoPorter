@@ -1,0 +1,109 @@
+#Main {
+    background-color: #0b1120; /* Dark blue background */
+    color: rgb(255, 255, 255);
+}
+a {
+    text-decoration: none;
+    font-weight: 500;
+}
+a:hover {
+    text-decoration: underline;
+}
+
+.carousel-caption {
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+  
+  .banner-text {
+    color: white;
+    margin-top: 50px;
+  }
+  
+  .banner-text h1 {
+    font-size: 3rem;
+  }
+  
+  .banner-text .display-4 {
+    font-weight: 800;
+    font-size: 4.5rem;
+  }
+  
+  .city-dropdown {
+    margin: 20px 0;
+    color: white;
+  }
+  
+  .city-dropdown label {
+    margin-right: 10px;
+    font-size: 1.2rem;
+    font-weight: 500;
+  }
+  
+  .city-dropdown select {
+    padding: 6px 12px;
+    font-size: 1rem;
+    border-radius: 6px;
+    border: none;
+  }
+  
+  /* Banner Text Styling */
+.banner-text {
+    color: white;
+    margin-bottom: 20px;
+  }
+  
+ /* Banner Text Styling */
+.banner-text {
+    color: white;
+    margin-bottom: 20px;
+  }
+  
+  /* BIG BOX STYLE */
+  .big-service-card {
+    width: 22cm;
+    height: 9cm;
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+  
+    position: absolute;
+    left: 50px;
+    bottom: -4.5cm; /* Half of 9cm to push half outside the image */
+    z-index: 2;
+  }
+  
+  /* SMALL BOXES INSIDE */
+  .service-card {
+    width: 2cm;
+    height: 2cm;
+    background-color: rgb(236, 243, 255);
+    border-radius: 12px;
+    text-align: center;
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.2s ease;
+  }
+  
+  .service-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .service-icon {
+    width: 40px;
+    height: auto;
+    margin-bottom: 10px;
+  }
+  

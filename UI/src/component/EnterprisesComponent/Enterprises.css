@@ -1,0 +1,64 @@
+.enterprise-banner-container {
+    background: linear-gradient(to right, #000428, #004e92);
+    color: white;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    border-radius: 0 0 50px 0px;
+  }
+  
+  .enterprise-form input {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+  }
+  
+  .enterprise-form .input-group-text {
+    border: none;
+    background-color: #f8f9fa;
+    border-radius: 8px 0 0 8px;
+  }
+  
+
+  .enterprise-container {
+  padding: 40px;
+  background: linear-gradient(to right, #020024, #090979, #00d4ff);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-banner {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.form-left {
+  flex: 1;
+  padding: 30px;
+}
+
+.form-right {
+  flex: 1;
+  background: white;
+  color: black;
+  padding: 30px;
+  border-radius: 15px; 
+}
+
+.form-right input {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+.form-right button {
+  background-color: #005eff;
+  color: white;
+  border: none;
+  padding: 12px;
+  cursor: pointer;
+  width: 100%;
+}

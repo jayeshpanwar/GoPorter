@@ -1,0 +1,8 @@
+app.js -> Application level configuration file holds configuration of app like modules , route level middleware , application level middleware
+
+routers -> After checking base url route level middleware will redirect to specific router in routes folder
+
+controller -> It is logical implementation of application accepts data from router upcoming in request if required can make changes.
+
+As data is ready for insertion it will be validate by schema in controller & also connectivity will be implemented in same file 
+  

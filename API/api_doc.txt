@@ -1,0 +1,113 @@
+Category management API links :-
+
+-> insert api link
+
+url : http://localhost:3001/category/save
+method : post
+data : in form of params (req.body) post method   
+
+catnm , caticonnm
+
+-----------------------------------------------------------
+
+-> fetch api link
+
+url : http://localhost:3001/category/fetch/
+method : get
+
+data : query string must be attached to find specific data
+
+fields : key 
+value : data to be fetched
+
+------------------------------------------------------
+
+* to delete record from database
+
+url : http://localhost:3001/category/delete/
+method : delete
+
+data attached : if required condition object (url params or body)
+
+response : json
+
+-----------------------------------------------------------
+
+User management API links :-
+
+-> insert api link
+
+url : http://localhost:3001/user/save
+method : post
+data : in form of params (req.body) post method   
+
+name , email , password , mobile , address , city , gender
+
+-----------------------------------------------------------
+
+-> fetch api link
+
+url : http://localhost:3001/user/fetch/
+method : get
+
+data : query string must be attached to find specific data
+
+fields : key 
+value : data to be fetched
+
+------------------------------------------------------
+
+
+* to delete record from database
+
+resource url : https://reqbin.com/Article/HttpDelete
+
+url :http://localhost:3001/user/delete/
+method : delete
+
+data attached : if required condition object (url params or body)
+
+response : json
+
+req body : {"condition_obj":{condition as required}}
+
+-------------------------------------------------------
+
+* to update record from database
+
+resource url : https://www.geeksforgeeks.org/difference-between-put-and-patch-request/
+
+url : http://localhost:3001/user/update/
+method : patch
+
+data attached : if required object is to be added which holds both(condion object + data to be updated)
+
+response : json
+
+req body : {"condition_obj":{},"content_obj":{}}
+
+-------------------------------------------------------
+
+* to make login from database
+
+url : http://localhost:3001/user/login/
+method : post
+
+data attached : email & password (in body)
+
+response : json
+
+-------------------------------------------------------
+
+delete method :-
+
+The HTTP DELETE method is used to delete a resource from the server. Unlike GET and HEAD requests, the DELETE requests may change the server state.
+
+Sending a message body on a DELETE request might cause some servers to reject the request.
+
+But you still can send data to the server using URL parameters. This is usually an ID of the resource you want to delete.
+
+The DELETE method is defined to be idempotent, which means that sending the same HTTP DELETE request multiple times will have the same effect on the server and will not additionally affect the state or cause additional side effects.
+
+-------------------------------------------------------
+

@@ -1,0 +1,51 @@
+.help-center {
+    background: #000;
+    color: #fff;
+    padding: 40px 20px;
+    text-align: center;
+  }
+  
+  .help-center h1 {
+    font-size: 40px;
+    margin-bottom: 10px;
+  }
+  
+  .help-center .subtext {
+    font-size: 18px;
+    margin-bottom: 40px;
+  }
+  
+  .help-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+  }
+  
+  .help-box {
+    background: #fff;
+    color: #000;
+    border-radius: 12px;
+    padding: 25px;
+    text-align: left;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  }
+  
+  .help-box .icon {
+    font-size: 50px;
+    margin-bottom: 10px;
+  }
+  
+  .help-box h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .help-box a {
+    color: #0056ff;
+    text-decoration: none;
+  }
+  
+  .help-box a:hover {
+    text-decoration: underline;
+  }
+  

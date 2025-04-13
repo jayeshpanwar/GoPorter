@@ -1,0 +1,90 @@
+/* Container for the overall delivery section */
+.delivery-section {
+    background-color: #f5f7fa;
+  
+  }
+  
+  /* Container for the banner image and the overlay form */
+  .delivery-banner-container {
+    position: relative;
+    width: 100%;
+    height: 15cm;
+    overflow: hidden;
+  }
+  
+  /* Delivery banner image settings */
+  .delivery-banner {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  /* Overlay container that centers the form on the banner */
+  .form-overlay {
+    position: absolute;
+    top: 50%;
+    left: 80%;
+    transform: translate(-50%, -50%);
+    width: 350px;
+    background: rgba(255, 255, 255, 0.9); /* semi-transparent background */
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Form box styling */
+  .form-box {
+    width: 100%;
+  }
+  
+  /* Title in the form */
+  .form-title {
+    text-align: center;
+    font-weight: 600;
+    margin-bottom: 15px;
+  }
+  
+  /* Input and select field styling */
+  .form-input,
+  .form-select {
+    width: 100%;
+   
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  /* Row style for side-by-side selects */
+  .form-row {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  
+  /* Make full-width elements span 100% */
+  .full-width {
+    width: 100%;
+  }
+  
+  /* Submit button styling */
+  .form-button {
+    width: 100%;
+    background-color: #2f66f2;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+  }
+  
+  /* Playstore CTA styling */
+  .playstore-cta {
+    text-align: center;
+    margin-top: 15px;
+  }
+  
+  .playstore-img {
+    width: 150px;
+    margin-top: 5px;
+  }
+  

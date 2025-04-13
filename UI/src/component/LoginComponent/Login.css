@@ -1,0 +1,93 @@
+/* Login Section Background */
+#Login {
+    background: linear-gradient(to right, #000000, #0047c3);
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 300px;
+  }
+  
+  /* Container Styling */
+  .about-text {
+    background-color: #ffffff;
+    padding: 40px 30px;
+    border-radius: 15px;
+    box-shadow: 0px 12px 35px rgba(16, 0, 246, 0.502);
+    max-width: 500px;
+    width: 100%;
+    margin: auto;
+  }
+  
+  /* Heading Styling */
+  .about-text h1 {
+    font-size: 32px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .about-text h6 {
+    font-size: 14px;
+    color: #7c7d6c;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+  
+  /* Paragraph */
+  .about-text p {
+    color: #555;
+    line-height: 1.6;
+  }
+  
+  /* Form Styling */
+  .form-group label {
+    font-weight: 600;
+    margin-bottom: 5px;
+    display: block;
+    color: #333;
+  }
+  
+  .form-control {
+    height: 45px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    padding: 10px 15px;
+    font-size: 15px;
+    width: 100%;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+  }
+  
+  .form-control:focus {
+    border-color: #0055e8;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0, 87, 237, 0.2);
+  }
+  
+  /* Button */
+  .btn-primary {
+    background-color: #2575fc;
+    border: none;
+    padding: 12px 25px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 8px;
+    width: 30%;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-primary:hover {
+    background-color: #1a5edb;
+  }
+  
+  /* Alert Message */
+  .alert-info {
+    background-color: #d9ecff;
+    color: #3178c6;
+    border: 1px solid #b6e0fe;
+    border-radius: 8px;
+    padding: 10px 15px;
+    margin-bottom: 20px;
+    font-size: 15px;
+  }
+  
