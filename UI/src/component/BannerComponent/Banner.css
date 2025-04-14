@@ -10,107 +10,151 @@ a:hover {
     text-decoration: underline;
 }
 
+/* Main Container */
+#Main {
+  position: relative;
+  background-color: #0b1120;
+  color: rgb(255, 255, 255);
+  z-index: 1;
+}
+
+/* Carousel Caption */
 .carousel-caption {
-    bottom: 0;
-    top: 0;
-    left: 0;
-    right: 0;
-  }
-  
-  .banner-text {
-    color: white;
-    margin-top: 50px;
-  }
-  
-  .banner-text h1 {
-    font-size: 3rem;
-  }
-  
-  .banner-text .display-4 {
-    font-weight: 800;
-    font-size: 4.5rem;
-  }
-  
-  .city-dropdown {
-    margin: 20px 0;
-    color: white;
-  }
-  
-  .city-dropdown label {
-    margin-right: 10px;
-    font-size: 1.2rem;
-    font-weight: 500;
-  }
-  
-  .city-dropdown select {
-    padding: 6px 12px;
-    font-size: 1rem;
-    border-radius: 6px;
-    border: none;
-  }
-  
-  /* Banner Text Styling */
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+/* Banner Text */
 .banner-text {
-    color: white;
-    margin-bottom: 20px;
-  }
+  color: black;
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
+
+.banner-text h1 {
+  font-size: 3rem;
+}
+
+.banner-text .display-4 {
+  font-weight: 800;
+  font-size: 4.5rem;
+}
+
+/* Big White Box Container */
+/* This is the big card that overlaps the poster */
+.big-service-card {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  background: white;
+  border-radius: 5px;
+  padding: 30px 20px;
+  width: 90%;
+  height: 310px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-aroud;
+  align-items: center;
+}
+
+/* City Dropdown */
+.city-dropdown {
+  align-self: flex-start;
+  display: flex;
+
+  color: black;
+  font-size: 1rem;
+  font-weight: 500;
+    margin-left: 10px;
+
+}
+
+.city-dropdown select {
+
+  font-size: 1rem;
+  border: none;
+}
+
+/* Service Cards */
+
+.service-card-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px;
+  cursor: pointer;
+}
+.service-card1 {
+  width: 120px;
+  height: 150px;
+  background-color: #004dd1;
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.service-card {
+  width: 120px;
+  height: 120px;
+  background-color: #ecf3ff;
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   
- /* Banner Text Styling */
-.banner-text {
-    color: white;
-    margin-bottom: 20px;
-  }
+}
+
+
+.service-icon {
+  width: 60px;
+  height: 60px;
+}
+
+.service-label {
+  margin-top: 8px;
+  font-size: 1rem;
+  font-weight: 500;
+  color: black;
+  text-align: center;
+}
+
+.service-card-1 {
   
-  /* BIG BOX STYLE */
-  .big-service-card {
-    width: 22cm;
-    height: 9cm;
-    background-color: rgba(255, 255, 255, 0.95);
-    border-radius: 20px;
-    box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 10px;
-  
-    position: absolute;
-    left: 50px;
-    bottom: -4.5cm; /* Half of 9cm to push half outside the image */
-    z-index: 2;
-  }
-  
-  /* SMALL BOXES INSIDE */
-  .service-card {
-    width: 2cm;
-    height: 2cm;
-    background-color: rgb(236, 243, 255);
-    border-radius: 12px;
-    text-align: center;
-    padding: 10px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    transition: transform 0.2s ease;
-  }
-  
-  .service-card:hover {
-    transform: translateY(-5px);
-  }
-  
-  .service-icon {
-    width: 40px;
-    height: auto;
-    margin-bottom: 10px;
-  }
-  
+  font-size: 1rem;
+  font-weight: 500;
+  color: rgb(255, 255, 255);
+  text-align:justify;
+}
+
+.services-row {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+/* Estimate Box */
+.estimate-box {
+  background-color: #007bff;
+  color: white;
+  font-weight: 600;
+  width: 160px;
+  height: 120px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+
 
   .services-section {
     padding: 4rem 2rem;
-    background-color: #f5f7ff;
+    background-color: #eaedfb;
     text-align: center;
   }
   
@@ -181,10 +225,11 @@ a:hover {
     background: linear-gradient(to right, #000000, #090909);
     color: white;
     text-align: center;
-    padding: 60px 20px;
+    padding: 100px 20px;
   }
   
   .growth-title {
+ 
     font-size: 2rem;
     font-weight: bold;
     margin-bottom: 30px;
@@ -215,6 +260,10 @@ a:hover {
   
   .stat-box {
     min-width: 150px;
+  }
+
+  .map{
+    align-items: center;
   }
   
   .stat-number {

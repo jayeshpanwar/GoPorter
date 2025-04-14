@@ -21,8 +21,12 @@ import EpAdmin from './component/EpAdminComponent/EpAdmin.js';
 import Verifyuser from './component/VerifyuserComponent/Verifyuser.js';
 import Delivery from './component/DeliveryComponent/Delivery.js';
 import 'bootstrap/dist/css/bootstrap.min.css';
-
-
+import Estimate from './Estimate.js';
+import Trucks from './component/Trucks';
+import PackersMovers from './component/PackersMovers';
+import IntercityCourier from './component/IntercityCourier';
+import TwoWheeler from './TwoWheeler.js';
+//import Estimate from './Estimate.js';
 
 
 
@@ -45,12 +49,11 @@ function App() {
         <Route path="/epadmin" element={<EpAdmin />} />
         <Route path="/verifyuser/:email" element={<Verifyuser />} />
         <Route path="/delivery" element={<Delivery />} />
-  
-      
-
-        
-        
-
+        <Route path="/estimate" element={<Estimate />} />
+        <Route path="/two-wheeler" element={<TwoWheeler />} />
+        <Route path="/trucks" element={<Trucks />} />
+        <Route path="/packers-movers" element={<PackersMovers />} />
+        <Route path="/intercity" element={<IntercityCourier />} />
 
       </Routes>
     <div id="container">
