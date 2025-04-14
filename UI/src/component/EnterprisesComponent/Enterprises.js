@@ -1,9 +1,40 @@
-import React from 'react';
+
 import { Link } from 'react-router-dom';
+import axios from "axios";
 import './Enterprises.css';
+import React, { useState } from "react";
+import { __userapiurl } from "../../Apiurl";
 import { FaUser, FaBuilding, FaPhoneAlt, FaEnvelope } from 'react-icons/fa';
 
 function Enterprises() {
+    const [name, setName] = useState("");
+    const [companyname, setCompanyName] = useState("");
+    const [mobile, setMobile] = useState("");
+    const [email, setEmail] = useState("");
+      const [output,setOutput]=useState("")
+ 
+  
+    const handleSubmit = () => {
+      alert("");
+      const userDetail = {
+        "name": name,"email": email,"mobile": mobile,
+        "companyname": companyname
+      };
+  
+      axios.post(__userapiurl+"save", userDetail)
+      .then((response)=>{
+        setOutput("Thank you for contacting us!!👍");
+        setName("");
+        setCompanyName("");
+        setMobile("");
+        setEmail("");
+      })
+      .catch((error)=>{
+        console.error(error);
+        setOutput("Something Went Wrong❌")
+      })
+       
+    };
   return (
     <div className="enterprise-banner-container">
       <div className="enterprise-content row mx-0">
@@ -28,28 +59,71 @@ function Enterprises() {
           <div className="enterprise-form p-4 bg-white rounded-4 shadow-lg w-100" style={{ maxWidth: '400px' }}>
             <h5 className="text-center fw-bold mb-4">Fill Out For More Details</h5>
             <form>
-              <div className="input-group mb-3">
-                <span className="input-group-text bg-light"><FaUser /></span>
-                <input type="text" className="form-control" placeholder="Enter your Name*" />
+            <div className="form-group">
+              <label htmlFor="name">Name:</label>
+              <input
+                type="text"
+                className="form-control"
+                placeholder="Enter your name"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+                required
+              />
+            </div>
+            <br />
+
+            <div className="form-group">
+              <label htmlFor="email">Email:</label>
+              <input
+                type="email"
+                className="form-control"
+                placeholder="Enter your email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                required
+              />
+            </div>
+            <br />
+
+           
+
+           
+
+            <div className="form-group">
+              <label htmlFor="mobile">Mobile:</label>
+              <input
+                type="number"
+                className="form-control"
+                placeholder="Enter your mobile number"
+                value={mobile}
+                onChange={(e) => setMobile(e.target.value)}
+                required
+              />
+            </div>
+            <br />
+
+            <div className="form-group">
+              <label htmlFor="companyname">CompanyName</label>
+              <input
+                type="text"
+                className="form-control"
+                placeholder="Enter your Company Name"
+                value={companyname}
+                onChange={(e) => setCompanyName(e.target.value)}
+                required
+              />
+            </div>
+            <br />
+
+            
+            <button type="button" className="btn btn-primary" onClick={handleSubmit}>Register</button>
+          </form>
+
               </div>
-              <div className="input-group mb-3">
-                <span className="input-group-text bg-light"><FaBuilding /></span>
-                <input type="text" className="form-control" placeholder="Enter your Company Name*" />
-              </div>
-              <div className="input-group mb-3">
-                <span className="input-group-text bg-light"><FaPhoneAlt /></span>
-                <input type="text" className="form-control" placeholder="Enter your Phone Number*" />
-              </div>
-              <div className="input-group mb-4">
-                <span className="input-group-text bg-light"><FaEnvelope /></span>
-                <input type="email" className="form-control" placeholder="Enter your Email ID" />
-              </div>
-              <button type="submit" className="btn btn-primary w-100">Get in Touch</button>
-            </form>
+            </div>
           </div>
-        </div>
-      </div>
-    </div>
+          </div>
+       
    
   );
 }
