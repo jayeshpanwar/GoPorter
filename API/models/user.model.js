@@ -27,7 +27,7 @@ const userSchema=mongoose.Schema({
     },
     address:{
         type:String,
-        require:[true,'mobile is required'],
+        require:[true,'address is required'],
         trim:true
     },
     city:{

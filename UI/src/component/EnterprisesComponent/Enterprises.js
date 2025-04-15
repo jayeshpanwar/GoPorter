@@ -4,7 +4,7 @@ import axios from "axios";
 import './Enterprises.css';
 import React, { useState } from "react";
 import { __userapiurl } from "../../Apiurl";
-import { FaUser, FaBuilding, FaPhoneAlt, FaEnvelope } from 'react-icons/fa';
+import { Faenterprises, FaBuilding, FaPhoneAlt, FaEnvelope } from 'react-icons/fa';
 
 function Enterprises() {
     const [name, setName] = useState("");
@@ -16,12 +16,12 @@ function Enterprises() {
   
     const handleSubmit = () => {
       alert("");
-      const userDetail = {
+      const enterprisesDetail = {
         "name": name,"email": email,"mobile": mobile,
         "companyname": companyname
       };
   
-      axios.post(__userapiurl+"save", userDetail)
+      axios.post(__userapiurl+"save", enterprisesDetail)
       .then((response)=>{
         setOutput("Thank you for contacting us!!👍");
         setName("");
@@ -59,8 +59,9 @@ function Enterprises() {
           <div className="enterprise-form p-4 bg-white rounded-4 shadow-lg w-100" style={{ maxWidth: '400px' }}>
             <h5 className="text-center fw-bold mb-4">Fill Out For More Details</h5>
             <form>
+              
             <div className="form-group">
-              <label htmlFor="name">Name:</label>
+              <label htmlFor="name"></label>
               <input
                 type="text"
                 className="form-control"
@@ -73,7 +74,7 @@ function Enterprises() {
             <br />
 
             <div className="form-group">
-              <label htmlFor="email">Email:</label>
+              <label htmlFor="email"></label>
               <input
                 type="email"
                 className="form-control"
@@ -90,7 +91,7 @@ function Enterprises() {
            
 
             <div className="form-group">
-              <label htmlFor="mobile">Mobile:</label>
+              <label htmlFor="mobile"></label>
               <input
                 type="number"
                 className="form-control"
@@ -103,7 +104,7 @@ function Enterprises() {
             <br />
 
             <div className="form-group">
-              <label htmlFor="companyname">CompanyName</label>
+              <label htmlFor="companyname"></label>
               <input
                 type="text"
                 className="form-control"

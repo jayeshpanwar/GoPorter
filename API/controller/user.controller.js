@@ -49,11 +49,11 @@ export const fetch=async(req,res)=>{
     }
 
     export const update=async(req,res)=>{
-       var users= await userSchemaModel.findOne(JSON.parse(req.body.condition_obj));
+       var users= await userSchemaModel.findOne(req.body.condition_obj);
 
        if(users)
        {
-            var userDetail=await userSchemaModel.updateOne(JSON.parse(req.body.condition_obj),{$set:(JSON.parse(req.body.content_obj))})
+            var userDetail=await userSchemaModel.updateOne(req.body.condition_obj,{$set:req.body.content_obj})
             
             if(userDetail)
             {
@@ -70,11 +70,11 @@ export const fetch=async(req,res)=>{
        }
      }
      export const deleteUser=async(req,res)=>{
-        var users= await userSchemaModel.findOne(JSON.parse(req.body.condition_obj));
+        var users= await userSchemaModel.findOne(req.body.condition_obj);
  
         if(users)
         {
-             var userDetail=await userSchemaModel.deleteOne(JSON.parse(req.body.condition_obj))
+             var userDetail=await userSchemaModel.deleteOne(req.body.condition_obj)
              
              if(userDetail)
              {

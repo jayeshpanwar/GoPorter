@@ -26,6 +26,9 @@ import Trucks from './component/Trucks';
 import PackersMovers from './component/PackersMovers';
 import IntercityCourier from './component/IntercityCourier';
 import TwoWheeler from './TwoWheeler.js';
+import CpUser from './component/CpUserComponent/CpUser.js';
+import EpUser from './component/EpUserComponent/EpUser.js';
+
 //import Estimate from './Estimate.js';
 
 
@@ -36,6 +39,7 @@ function App() {
     <Nav/>
     <Banner/>
     <Routes>  {/* Ensuring only one route is active at a time */}
+    <Route path="/Enterprises" element={<Enterprises />} />   
         <Route path="/" element={<Home />} />
         <Route path="/Enterprises" element={<Enterprises />} />
         <Route path="/register" element={<Register />} />
@@ -54,6 +58,9 @@ function App() {
         <Route path="/trucks" element={<Trucks />} />
         <Route path="/packers-movers" element={<PackersMovers />} />
         <Route path="/intercity" element={<IntercityCourier />} />
+        <Route path="/epuser" element={<EpUser />} />
+        <Route path="/cpuser" element={<CpUser />} />
+        
 
       </Routes>
     <div id="container">

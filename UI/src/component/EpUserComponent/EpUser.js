@@ -1,11 +1,10 @@
-import './EpAdmin.css';
+import './EpUser.css';
 import {useState, useEffect} from 'react';
 import axios from 'axios';
 import {useNavigate} from 'react-router-dom'; 
-
 import { __userapiurl } from '../../Apiurl';
 
-function EpAdmin() {
+function EpUser() {
     const navigate=useNavigate();    
     const [name,setName]=useState();
     const [email,setEmail]=useState();
@@ -35,8 +34,7 @@ function EpAdmin() {
     
    const handleSubmit =()=>
    {
-    let updateUserDetail={"condition_obj":{"email":email},"content_obj":{"name":name,"mobile":mobile,"city":city,"address":address,
-    "gender":gender}};
+    let updateUserDetail={"condition_obj":{"email":email},"content_obj":{"name":name,"mobile":mobile,"city":city,"address":address,"gender":gender}};
        axios.patch(__userapiurl+"update",updateUserDetail).then((response)=>{
         setOutput("User Updated successfully");
         
@@ -115,4 +113,4 @@ function EpAdmin() {
     );
 }
 
-export default EpAdmin;
+export default EpUser;

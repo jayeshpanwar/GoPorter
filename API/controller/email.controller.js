@@ -14,14 +14,7 @@ function sendMail(email, password) {
     from: 'panwarjayesh2003@gmail.com',
     to: email, // Send to dynamic user
     subject: 'Welcome! Verify Your Email',
-    html: `
-      <h1>Welcome to the system</h1>
-      <p>Your email is <strong>${email}</strong></p>
-      <p>Your password is <strong>${password}</strong></p>
-      <h2>Thank you for registering</h2>
-      <p>Click the link below to verify your email:</p>
-      <a href="http://localhost:3000/verify/${email}">Verify Email</a>
-    `
+    html:  "<h1>Welcome to Porter</h1><p>You have successfully register to our site , your login credentials are attached below</p><h2>Email:"+email+"</h2><h2>Password:"+password+"</h2><h1>Click on the link below to verify your account</h1>http://localhost:3000/verify/"+email
   };
 
   transporter.sendMail(mailOptions, function (error, info) {

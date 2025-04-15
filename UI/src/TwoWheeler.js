@@ -14,7 +14,7 @@ function TwoWheeler() {
     }
 
     const distance = Math.floor(Math.random() * 15) + 3;
-    const ratePerKm = 10;
+    const ratePerKm = 12;
     setEstimate({
       distance,
       price: distance * ratePerKm,

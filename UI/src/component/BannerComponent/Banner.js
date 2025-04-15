@@ -21,7 +21,7 @@ function Banner() {
         <>
           <img src="/assets/img/admin-banner.jpg" width="100%" height="500px" alt="Admin Banner" />
           <div className="carousel-caption">
-            <h1>Welcome Admin!</h1>
+            <img src='porterlogo.jpg' ></img>
             <p>Manage everything from here.</p>
           </div>
         </>
