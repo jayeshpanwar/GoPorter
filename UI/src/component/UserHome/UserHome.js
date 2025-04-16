@@ -1,45 +1,190 @@
-import React from 'react';
+import React, { useState } from 'react'; 
+import { useNavigate } from 'react-router-dom';
 import './UserHome.css';
 
 function UserHome() {
+  const [city, setCity] = useState('');
+  const navigate = useNavigate();
+
+  const handleCityChange = (e) => {
+    setCity(e.target.value);
+  };
   return (
     <>
-      <div className="hero-section text-white py-5">
-        <div className="container d-flex flex-column flex-lg-row align-items-center justify-content-between">
-          
-          {/* LEFT CONTENT */}
-          <div className="hero-text mb-5 mb-lg-0">
-            <h1 className="display-4 fw-bold mb-3">Your Lightning Fast<br />Delivery Partner</h1>
-            <p className="mb-4 text-white-50">
-              Facere distinctio molestiae nisi fugit tenetur repellat non praesentium nesciunt
-              optio quis sit odio nemo quisquam. Eius quos reiciendis eum vel eum voluptatem
-              eum maiores eaque id optio ullam occaecati odio est possimus vel reprehenderit.
-            </p>
+    <div id="Main">
+              <div className="carousel-inner">
+                <div className="carousel-item active">
 
-            {/* SEARCH BAR */}
-           {/*  <div className="input-group mb-4 shadow" style={{ maxWidth: "500px" }}>
-              <input type="text" className="form-control" placeholder="Enter ZIP code or City" />
-              <button className="btn btn-primary">Search</button>
-            </div> */}
 
-            {/* STATS */}
-            
+                  <img
+                    src="/assets/img/backposter.jpg"
+                    width="100%"
+                    height="750px"
+                    alt="Banner"
+                  />
+                  <div className="carousel-caption d-flex align-items-center justify-content-start">
+                    <div className="container">
+                      <div className="row">
+                        {/* LEFT TEXT CONTENT */}
+                        <div className="banner-text text-start">
+                          <h1>Delivery hai?</h1>
+                          <h1 className="fw-bold display-4 text-uppercase">#HoJayega!</h1>
+                        </div>
+
+                        {/* White Box */}
+                        <div className="big-service-card">
+                          {/* City Dropdown */}
+
+                          <div className="city-dropdown">
+                            <label htmlFor="city">⚫City:</label>
+                            <select id="city" value={city} onChange={handleCityChange}>
+                              <option value="Mumbai">Mumbai</option>
+                              <option value="Delhi">Delhi</option>
+                              <option value="Bangalore">Bangalore</option>
+                              <option value="Hyderabad">Hyderabad</option>
+                              <option value="Pune">Pune</option>
+                              <option value="Indore">Indore</option>
+                            </select>
+                          </div>
+
+                          {/* Service Boxes - All Cards are clickable now */}
+                          <div className="services-row">
+                            <div className="service-card-wrapper" onClick={() => navigate('/two-wheeler')}>
+                              <div className="service-card">
+                                <img src="/assets/img/bikes.png" alt="Two Wheelers" className="service-icon" />
+                              </div>
+                              <div className="service-label">Two Wheelers</div>
+                            </div>
+
+                            <div className="service-card-wrapper" onClick={() => navigate('/trucks')}>
+                              <div className="service-card">
+                                <img src="/assets/img/trucks.jpeg" alt="Trucks" className="service-icon" />
+                              </div>
+                              <div className="service-label">Trucks</div>
+                            </div>
+
+                            <div className="service-card-wrapper" onClick={() => navigate('/packers-movers')}>
+                              <div className="service-card">
+                                <img src="/assets/img/p.jpeg" alt="Packers & Movers" className="service-icon" />
+                              </div>
+                              <div className="service-label">Packers & Movers</div>
+                            </div>
+
+                            <div className="service-card-wrapper" onClick={() => navigate('/intercity')}>
+                              <div className="service-card">
+                                <img src="/assets/img/intercity.jpeg" alt="All India Parcel" className="service-icon" />
+                              </div>
+                              <div className="service-label">All India Parcel</div>
+                            </div>
+
+                            <div className="service-card-wrapper" onClick={() => navigate('/estimate')}>
+                              <div className="service-card1">
+                                <div className="service-card-1">
+                              <pre><h5>Get  an</h5>
+                              <h5>estimate</h5>
+                              <h8>(takes 2 min~)</h8>
+                              </pre>
+                              </div>
+                              </div>
+                          
+                            </div>
+
+
+                          </div>
+
+
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+
+              </div>
             </div>
-          </div>
+            <section className="services-section">
+              <h5 className="section-title">~ OUR SERVICES ~</h5>
+              <div className="services-container">
+                {/* Porter Enterprise Card */}
+                <div className="service-box gradient-purple">
+                  <span className="service-tag">Porter Enterprise</span>
+                  <h3>Streamlining operations to drive business growth</h3>
+                  <button className="service-btn">→</button>
+                </div>
 
-          {/* RIGHT IMAGE */}
-          <div className="hero-image text-center">
-            <img
-              src="/assets/img/assets/img/hero-img.svg" // Replace with your image
-              alt="Home"
-              className="img-fluid"
-              style={{ maxHeight: "400px" }}
-              
-            />
-            <h2>"user home"</h2>
-          
-        </div>
-      </div>
+                {/* API Integration Card */}
+                <div className="service-box gradient-green">
+                  <span className="service-tag">API Integration</span>
+                  <h3>Automate the transportation of your goods by integrating our APIs</h3>
+                  <button className="service-btn">→</button>
+                </div>
+
+                {/* Two-Wheelers Card */}
+                <div className="service-box gradient-red">
+                  <span className="service-tag">Two-Wheelers</span>
+                  <h3>Reliable goods transportation services for up to 20 kg</h3>
+                  <button className="service-btn">→</button>
+                </div>
+
+                {/* Trucks Card */}
+                <div className="service-box gradient-blue">
+                  <span className="service-tag">Trucks</span>
+                  <h3>Hassle-free goods transportation up to 2500 kg</h3>
+                  <button className="service-btn">→</button>
+                </div>
+
+                {/* packers & Movers*/}
+                <div className="service-box gradient-blue">
+                  <span className="service-tag">Packers & Movers</span>
+                  <h3>Hassle-free goods transportation up to 2500 kg</h3>
+                  <button className="service-btn">→</button>
+                </div>
+
+                {/*Intercity Courier Service */}
+                <div className="service-box gradient-blue">
+                  <span className="service-tag">Intercity Courier Service
+                  </span>
+                  <h3>Reliable Intercity Courier Service via Surface & Air</h3>
+                  <button className="service-btn">→</button>
+                </div>
+
+              </div>
+
+
+            </section>
+
+            <section class="growth-section">
+              <h2 class="growth-title">And thanks to you, we are growing each & every day!</h2>
+
+              <div class="growth-banner">
+                🎉 <strong>Marhaba Dubai!</strong> We're <span>now live</span> & ready to take care of all your logistical needs.
+              </div>
+
+              <div class="growth-stats">
+                <div class="stat-box">
+                  <div class="stat-number">21+</div>
+                  <div class="stat-label">Indian Cities</div>
+                </div>
+                <div class="divider"></div>
+                <div class="stat-box">
+                  <div class="stat-number">7.5 Lakh+</div>
+                  <div class="stat-label">Driver Partners</div>
+                </div>
+                <div class="divider"></div>
+                <div class="stat-box">
+                  <div class="stat-number">1.5+ Crore</div>
+                  <div class="stat-label">Customers</div>
+                </div>
+                <div class="map">
+                <img src="/assets/img/map.webp" alt="Line" class="line" height="550px" />
+                
+              </div>
+              <h8>We are serving in Delhi NCR, Bengaluru, Mumbai, Hyderabad, Ahmedabad,
+                   Jaipur, Pune, Kolkata, Surat, Chennai, Coimbatore, Indore, Nagpur, Chandigarh,
+                    Lucknow, Vadodara, Ludhiana, Kochi, Nashik, Kanpur, Trivandrum and Vizag.</h8>
+              </div>
+            </section>
+
     </>
   );
 }

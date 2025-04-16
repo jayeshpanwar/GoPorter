@@ -29,11 +29,7 @@ function Banner() {
     } else if (role === 'user') {
       setBannerContent(
         <>
-          <img src="/assets/img/user-banner.jpg" width="100%" height="500px" alt="User Banner" />
-          <div className="carousel-caption">
-            <h1>Hello User!</h1>
-            <p>Fast & Reliable Deliveries at your doorstep.</p>
-          </div>
+         
         </>
       );
 
