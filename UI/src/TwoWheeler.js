@@ -22,10 +22,11 @@ function TwoWheeler() {
   };const role = "user"; // Or dynamically get this from props/context/auth
 
   const handleProceed = () => {
+    const role = localStorage.getItem('role');
     if (role === "user") {  
     alert("Proceeding to payment...");
     } else {
-      alert("Please login as user to proceed with payment");
+      alert("Please login first before proceed with payment");
     }
   };
 
