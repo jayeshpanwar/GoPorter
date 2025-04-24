@@ -106,7 +106,7 @@ function UserHome() {
               <h5 className="section-title">~ OUR SERVICES ~</h5>
               <div className="services-container">
                 {/* Porter Enterprise Card */}
-                <div className="service-box gradient-purple">
+                <div className="service-box gradient-purple" >
                   <span className="service-tag">Porter Enterprise</span>
                   <h3>Streamlining operations to drive business growth</h3>
                   <button className="service-btn">→</button>
@@ -120,7 +120,7 @@ function UserHome() {
                 </div>
 
                 {/* Two-Wheelers Card */}
-                <div className="service-box gradient-red">
+                <div className="service-box gradient-red" onClick={() => navigate('/two-wheeler')}>
                   <span className="service-tag">Two-Wheelers</span>
                   <h3>Reliable goods transportation services for up to 20 kg</h3>
                   <button className="service-btn">→</button>

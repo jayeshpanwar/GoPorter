@@ -19,9 +19,15 @@ function IntercityCourier() {
       price: distance * ratePerKm,
     });
   };
-  const handlePayment = () => {
-    alert("Payment done");
-   }
+  const handleProceed = () => {
+    const role = localStorage.getItem('role');
+    if (role === "user") {  
+    alert("Proceeding to payment...");
+    } else {
+      alert("Please login first before proceed with payment");
+    }
+  };
+
   return (
     <div className="container py-5" style={{ maxWidth: '600px' }}>
       <h2>Intercity Courier Estimate</h2>
@@ -64,7 +70,7 @@ function IntercityCourier() {
         <div className="mt-4 bg-light p-3 rounded">
           <h5>Estimated Distance: {estimate.distance} km</h5>
           <h5>Estimated Price: ₹{estimate.price}</h5>
-          <button className="btn btn-success mt-3" onClick={handlePayment}>Proceed to Payment</button>
+          <button className="btn btn-success mt-3" onClick={handleProceed}>Proceed to Payment</button>
            
            
         </div>
