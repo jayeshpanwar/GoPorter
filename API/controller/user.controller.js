@@ -2,7 +2,6 @@ import '../models/connection.js';
 import url from 'url';
 import jwt from 'jsonwebtoken';
 import rs from 'randomstring';
-import sendMail from './email.controller.js';
 
 import userSchemaModel from '../models/user.model.js';
 
@@ -18,12 +17,8 @@ export const save =async(req,res)=>{
     //console.log(userDetail);
     userDetail={...userDetail,"_id":_id,"role":"user","status":0,"info":Date()};
 //    console.log(userDetail);
-
-
   try{
     var user= await userSchemaModel.create(userDetail);
-    sendMail(user.email,user.password);
-    //console.log(user);
     res.status(201).json({"status":true});
   }
   catch(err)
@@ -37,8 +32,8 @@ export const save =async(req,res)=>{
 export const fetch=async(req,res)=>{
         var condition_obj=url.parse(req.url,true).query;
         //console.log(condition_obj);
-        var user=await userSchemaModel.find(condition_obj);
-        if(user.length!=0)
+        var user=await userSchemaModel.findOne(condition_obj);
+        if(user)
         {
             res.status(200).json(user);
         }
@@ -49,11 +44,11 @@ export const fetch=async(req,res)=>{
     }
 
     export const update=async(req,res)=>{
-       var users= await userSchemaModel.findOne(req.body.condition_obj);
+       var users= await userSchemaModel.findOne(JSON.parse(req.body.condition_obj));
 
        if(users)
        {
-            var userDetail=await userSchemaModel.updateOne(req.body.condition_obj,{$set:req.body.content_obj})
+            var userDetail=await userSchemaModel.updateOne(JSON.parse(req.body.condition_obj),{$set:(JSON.parse(req.body.content_obj))})
             
             if(userDetail)
             {
@@ -70,11 +65,11 @@ export const fetch=async(req,res)=>{
        }
      }
      export const deleteUser=async(req,res)=>{
-        var users= await userSchemaModel.findOne(req.body.condition_obj);
+        var users= await userSchemaModel.findOne(JSON.parse(req.body.condition_obj));
  
         if(users)
         {
-             var userDetail=await userSchemaModel.deleteOne(req.body.condition_obj)
+             var userDetail=await userSchemaModel.deleteOne(JSON.parse(req.body.condition_obj))
              
              if(userDetail)
              {

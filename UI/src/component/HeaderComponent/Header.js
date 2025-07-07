@@ -4,8 +4,8 @@ function Header() {
   return(
     <>
     <div id="Header">
-    <img src="./assets/img/Porterlogo.jpg" alt="header-pic" />
-  </div>
+      <marquee direction='right' ><img src="./assets/img/pic.webp" alt="header-pic" />
+      </marquee></div>
     </>
   );
 }
