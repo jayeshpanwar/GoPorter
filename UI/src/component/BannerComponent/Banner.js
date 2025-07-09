@@ -24,7 +24,6 @@ function Banner() {
                         <div class="p-3" style={{"max-width": "900px"}}>
                             <h5 class="text-white text-uppercase mb-3 animated slideInDown">Welcome To TOS</h5>
                             <h1 class="display-3 text-white animated slideInDown mb-4">Best Plumbing Services</h1>        
-                            <p class="fs-5 fw-medium text-white mb-4 pb-2">Vero elitr justo clita lorem. Ipsum dolor at sed stet sit diam no. Kasd rebum ipsum et diam justo clita et kasd rebum sea elitr.</p>
                             <a class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Read More</a>
                             <a class="btn btn-secondary py-md-3 px-md-5 animated slideInRight">Free Quote</a>
                         </div>
@@ -34,9 +33,7 @@ function Banner() {
                     <img class="w-100" src="./assets/img/carousel-2.jpg" alt="Image" />
                     <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                         <div class="p-3" style={{"max-width": "900px"}}>
-                            <h5 class="text-white text-uppercase mb-3 animated slideInDown">Welcome To TOS</h5>
-                            <h1 class="display-3 text-white animated slideInDown mb-4">Best Elctrician Services</h1>        
-                            <p class="fs-5 fw-medium text-white mb-4 pb-2">Vero elitr justo clita lorem. Ipsum dolor at sed stet sit diam no. Kasd rebum ipsum et diam justo clita et kasd rebum sea elitr.</p>
+                            
                             <a class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Read More</a>
                             <a class="btn btn-secondary py-md-3 px-md-5 animated slideInRight">Free Quote</a>
                         </div>
